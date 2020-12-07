@@ -6,6 +6,6 @@ const router = express.Router();
 const frontController = require("../controllers/front.js");
 
 router.get("/", frontController.displayPage);
-// router.get("/messages", frontController);
+// router.get("/messages", frontController.);
 
 module.exports = router;

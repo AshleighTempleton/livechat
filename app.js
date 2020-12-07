@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 const frontRoutes = require("./frontend/routes/front.js");
 const backRoutes = require("./backend/routes/back.js");
 
-const url = "";
+const url =
+  "mongodb+srv://Ash:6chKu7jcPtohJb9K@clustermain.dafs1.gcp.mongodb.net/livechat?retryWrites=true&w=majority";
 
 mongoose
   .connect(url, {
