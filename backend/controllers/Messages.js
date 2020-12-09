@@ -16,3 +16,13 @@ exports.addMessage = (req, res, next) => {
     .then(() => res.status(200).redirect("/"))
     .catch((error) => res.status(400).json({ error }));
 };
+
+exports.deleteMessage = (req, res, next) => {
+  Message.findOne({ _id: req.params.id })
+    .then(() => {
+      Message.deleteOne({ _id: req.params.id })
+        .then(() => res.status(200).redirect("/"))
+        .catch((error) => res.status(400).json({ error }));
+    })
+    .catch((error) => res.status(404).json({ error }));
+};

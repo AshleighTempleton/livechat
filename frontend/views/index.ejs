@@ -37,6 +37,8 @@
 			<div class="oneMessage">
 				<h3><%= messages[i].name %></h3>
 				<p class="messageTxt"><%= messages[i].message %></p>
+				<p class="messageTxt"><%= messages[i].time %></p>
+				<a href="/app/deleteMessage/<%= messages[i]._id %>">Delete</a>
 			</div>
 			<% } %>
 
